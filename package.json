@@ -1,14 +1,16 @@
 {
-  "name": "My cv",
+  "name": "my-cv",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "watch:css": "npx tailwindcss -i ./src/styles/project/index.css -o ./src/styles/index.css --watch",
+    "start:scripts": "vite",
+    "start": "npm-run-all --parallel watch:css start:scripts",
     "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "commit-all": "git add . && cz"
+    "commit-all": "git add . && cz",
+    "changelog": "npx conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
   },
   "config": {
     "commitizen": {
@@ -22,7 +24,8 @@
     "postcss-nested": "6.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "vite-plugin-eslint": "^1.8.1"
+    "vite-plugin-eslint": "^1.8.1",
+    "npm-run-all": "4.1.5"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
@@ -32,9 +35,12 @@
     "@vitejs/plugin-react": "^4.2.0",
     "autoprefixer": "^10.4.16",
     "eslint": "^8.53.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-react": "7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.4",
     "postcss": "^8.4.31",
+    "prettier": "2.8.4",
     "postcss-import": "^15.1.0",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.2.2",

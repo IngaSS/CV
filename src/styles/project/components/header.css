@@ -1,0 +1,18 @@
+.header {
+  @apply px-24;
+  @apply bg-color2 text-white;
+}
+
+.navigation-list {
+  @apply flex justify-center;
+}
+
+.navigation-list-item {
+  @apply py-16 px-24;
+
+  &:hover {
+    @apply cursor-pointer;
+    @apply bg-color3;
+    transition: background 0.3s;
+  }
+}

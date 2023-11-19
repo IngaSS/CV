@@ -1,0 +1,8 @@
+.layout {
+  @apply bg-color1;
+}
+
+.main {
+  @apply w-100 h-12;
+  @apply bg-color4;
+}
