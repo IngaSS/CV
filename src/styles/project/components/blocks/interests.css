@@ -1,0 +1,36 @@
+.interests-card {
+  @apply w-full bg-white;
+  @apply flex flex-col gap-y-32;
+  @apply p-60;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.interests-card-text {
+  @apply text-14 font-light text-color2 text-center;
+}
+
+.interests-items {
+  @apply flex gap-x-32 justify-center;
+}
+
+.interests-item {
+  @apply flex flex-col gap-y-8 items-center;
+
+  & > svg {
+    @apply text-color2;
+  }
+
+  & > span {
+    @apply text-14 font-normal text-color2;
+  }
+}
+
+@screen mobile {
+  .interests-card {
+    @apply p-24;
+  }
+
+  .interests-items {
+    @apply flex-wrap gap-24;
+  }
+}

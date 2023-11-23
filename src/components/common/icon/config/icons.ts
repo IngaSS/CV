@@ -1,5 +1,6 @@
 /// <reference types="vite-plugin-svgr/client" />
 import LinkedIn from '../../../../assets/icons/linkedin.svg?react'
+import Tick from '../../../../assets/icons/tick.svg?react'
 
 export const customIcons: {
   [key: string]: React.FunctionComponent<
@@ -10,4 +11,5 @@ export const customIcons: {
   >
 } = {
   linkedIn: LinkedIn,
+  tick: Tick,
 }

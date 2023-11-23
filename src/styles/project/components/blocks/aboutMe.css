@@ -10,6 +10,10 @@
   @apply bg-color4;
 }
 
+.aboutMe-text {
+  @apply text-14 font-light text-color2 text-center;
+}
+
 .aboutMe-upper-block {
   @apply flex flex-col;
 }
@@ -82,4 +86,14 @@
   @apply text-center;
   @apply text-20 font-light text-white;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.29);
+}
+
+@screen mobile {
+  .aboutMe-actions {
+    @apply flex-col gap-y-16;
+  }
+
+  .aboutMe-info {
+    @apply px-24 pb-24;
+  }
 }

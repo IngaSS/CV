@@ -6,3 +6,6 @@
 @import 'components/header.css';
 @import 'components/customTimeline.css';
 @import 'components/blocks/aboutMe.css';
+@import 'components/blocks/skills.css';
+@import 'components/blocks/interests.css';
+@import 'components/blocks/contacts.css';
