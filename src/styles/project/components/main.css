@@ -31,4 +31,16 @@ body {
   .block {
     @apply px-16;
   }
+
+  .mobile-menu__opened-true {
+    & .main {
+      @apply hidden;
+    }
+
+    & .menu-mobile {
+      @apply flex-col justify-center;
+      @apply pl-16;
+      @apply fixed left-0 top-0 h-68 w-full bg-color2;
+    }
+  }
 }

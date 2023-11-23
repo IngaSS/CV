@@ -6,10 +6,14 @@ import Skills from './blocks/skills'
 import Education from './blocks/education'
 import Interests from './blocks/interests'
 import Contacts from './blocks/contacts'
+import { useReactiveVar } from '@apollo/client'
+import { mobileMenuOpened } from '../store/main'
 
 const Layout = memo(() => {
+  const isMenuShown = useReactiveVar(mobileMenuOpened)
+
   return (
-    <div className="layout">
+    <div className={`layout mobile-menu__opened-${isMenuShown}`}>
       <Header />
       <main className="main">
         <div className="section">

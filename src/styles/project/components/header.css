@@ -30,7 +30,24 @@
 
 @screen mobile {
   .header {
-    @apply px-16;
+    @apply p-16;
+  }
+
+  .menu-mobile-icon {
+    @apply w-36 h-36;
+  }
+
+  .menu-mobile-btn {
+    @apply w-36 h-36;
+    @apply border-none outline-none;
+  }
+
+  .navigation-mobile-list {
+    @apply flex flex-col gap-y-24;
+  }
+
+  .navigation-mobile-list-item {
+    @apply text-20;
   }
 
   .navigation-list {
@@ -42,15 +59,23 @@
   }
 
   .navigation-mobile {
-    @apply opacity-0 h-0 p-0;
+    @apply opacity-0 h-0 p-0 px-16;
     transition: all 0.3s;
+
+    & .navigation-mobile-list {
+      @apply h-0;
+    }
 
     &__active-true {
       @apply p-16;
       @apply opacity-100;
-      height: 95vh;
+      height: 100%;
 
       transition: all 0.3s;
+
+      & .navigation-mobile-list {
+        @apply h-full;
+      }
     }
   }
 }

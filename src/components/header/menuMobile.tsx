@@ -1,14 +1,20 @@
-import { memo, useState } from 'react'
+import { memo } from 'react'
 import Icon from '../common/icon/icon'
 import { menuType } from './@types'
 import { menuConfig } from './config/config'
+import { useReactiveVar } from '@apollo/client'
+import { mobileMenuOpened, setMobileMenuOpened } from '../../store/main'
 
 const MenuMobile = memo(() => {
-  const [isMenuShown, setMenuShown] = useState(false)
+  const isMenuShown = useReactiveVar(mobileMenuOpened)
   return (
     <div className="menu-mobile">
-      <button onClick={() => setMenuShown(!isMenuShown)}>
-        {isMenuShown ? <Icon iconName="tick" /> : <Icon iconName="linkedIn" />}
+      <button onClick={() => setMobileMenuOpened(!isMenuShown)} className="menu-mobile-btn">
+        {isMenuShown ? (
+          <Icon iconName="cross" className="menu-mobile-icon" />
+        ) : (
+          <Icon iconName="menu" className="menu-mobile-icon" />
+        )}
       </button>
       <menu className={`navigation-mobile navigation-mobile__active-${isMenuShown}`}>
         <ul className="navigation-mobile-list">
