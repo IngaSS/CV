@@ -31,7 +31,9 @@ const events = [
 const Experience = memo(() => {
   return (
     <div className="block">
-      <h4 className="block-title">EXPERIENCE</h4>
+      <h4 className="block-title" id="experience">
+        EXPERIENCE
+      </h4>
       <CustomTimeline events={events} />
     </div>
   )

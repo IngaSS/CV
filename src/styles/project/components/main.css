@@ -2,6 +2,10 @@ body {
   @apply h-screen;
 }
 
+html {
+  @apply scroll-smooth;
+}
+
 .layout {
   @apply bg-color1;
 }

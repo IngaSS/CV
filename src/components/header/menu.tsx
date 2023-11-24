@@ -8,10 +8,10 @@ const Menu = memo(() => {
     <menu className="navigation">
       <MenuMobile />
       <ul className="navigation-list">
-        {menuConfig.map(({ name }: menuType, key: number) => {
+        {menuConfig.map(({ name, link }: menuType, key: number) => {
           return (
             <li key={key} className="navigation-list-item">
-              {name}
+              <a href={link}>{name}</a>
             </li>
           )
         })}

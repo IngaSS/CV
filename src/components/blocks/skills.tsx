@@ -19,7 +19,9 @@ const content = [
 const Skills = memo(() => {
   return (
     <div className="block">
-      <h4 className="block-title">SKILLS</h4>
+      <h4 className="block-title" id="skills">
+        SKILLS
+      </h4>
       <div className="skills-cards">
         {content.map(({ title, items }: any, key: number) => {
           return (

@@ -19,7 +19,9 @@ const Contacts = memo(() => {
 
   return (
     <div className="block mb-80">
-      <h4 className="block-title">Contact</h4>
+      <h4 className="block-title" id="contacts">
+        Contact
+      </h4>
       <div className="contacts">
         <div className="contacts-info">
           <div className="contacts-info-item">

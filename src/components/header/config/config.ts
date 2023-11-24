@@ -1,26 +1,26 @@
 export const menuConfig = [
   {
     name: 'Обо мне',
-    link: '/about-me',
+    link: '#about-me',
   },
   {
     name: 'Опыт',
-    link: '/experience',
+    link: '#experience',
   },
   {
     name: 'Навыки',
-    link: '/skills',
+    link: '#skills',
   },
   {
     name: 'Образование',
-    link: '/education',
+    link: '#education',
   },
   {
     name: 'Интересы',
-    link: '/interests',
+    link: '#interests',
   },
   {
     name: 'Контакты',
-    link: '/contacts',
+    link: '#contacts',
   },
 ]

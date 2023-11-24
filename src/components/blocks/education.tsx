@@ -31,7 +31,9 @@ const events = [
 const Education = memo(() => {
   return (
     <div className="block">
-      <h4 className="block-title">EDUCATION</h4>
+      <h4 className="block-title" id="education">
+        EDUCATION
+      </h4>
       <CustomTimeline events={events} />
     </div>
   )

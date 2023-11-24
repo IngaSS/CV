@@ -31,7 +31,9 @@ const interests = [
 const Interests = memo(() => {
   return (
     <div className="block">
-      <h4 className="block-title">Interests</h4>
+      <h4 className="block-title" id="interests">
+        Interests
+      </h4>
       <div className="interests-card">
         <p className="interests-card-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis et tortor ac tincidunt. In euismod
