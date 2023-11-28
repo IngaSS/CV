@@ -1,73 +1,47 @@
 import { memo } from 'react'
 import Icon from '../common/icon/icon'
 
-const content = [
-  {
-    title: 'Professional',
-    items: ['Committed', 'Committed', 'Committed', 'Committed', 'Committed'],
-  },
-  {
-    title: 'Personal',
-    items: ['Committed', 'Committed', 'Committed', 'Committed', 'Committed'],
-  },
-  {
-    title: 'Language',
-    items: ['Committed', 'Committed', 'Committed', 'Committed', 'Committed'],
-  },
-]
+const CompanyItem = ({ item }: any) => {
+  const { icon, name } = item
 
-const Skills = memo(() => {
+  return (
+    <div className="skills-animated-item">
+      <Icon iconName={icon} />
+      <span>{name}</span>
+    </div>
+  )
+}
+
+const Skills = memo(({ title, items1, items2, items3 }: any) => {
+  const items_1 = items1?.map((item: { name: string; icon: string }, index: number) => (
+    <CompanyItem item={item} key={index} />
+  ))
+  const items_2 = items2?.map((item: { name: string; icon: string }, index: number) => (
+    <CompanyItem item={item} key={index} />
+  ))
+
+  const items_3 = items3?.map((item: { name: string; icon: string }, index: number) => (
+    <CompanyItem item={item} key={index} />
+  ))
   return (
     <div className="block">
       <h4 className="block-title" id="skills">
-        SKILLS
+        {title}
       </h4>
-      <div className="skills-cards">
-        {content.map(({ title, items }: any, key: number) => {
-          return (
-            <div className="skills-card" key={key}>
-              <h5 className="skills-card-title">{title}</h5>
-              <div className="skills-card-content">
-                {items.map((name: string, key: number) => {
-                  return (
-                    <div key={key} className="skills-card-content-item">
-                      <span>{name}</span>
-                      <Icon iconName="tick" />
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-          )
-        })}
+      <div className="skills-animated-rows">
+        <div className={`skills-animated-row-wrapper skills-animated-row-wrapper-count-1`}>
+          <div className="skills-animated-row">{items_1}</div>
+          <div className="skills-animated-row2">{items_1}</div>
+        </div>
+        <div className={`skills-animated-row-wrapper skills-animated-row-wrapper-count-2`}>
+          <div className="skills-animated-row">{items_2}</div>
+          <div className="skills-animated-row2">{items_2}</div>
+        </div>
+        <div className={`skills-animated-row-wrapper skills-animated-row-wrapper-count-3`}>
+          <div className="skills-animated-row">{items_3}</div>
+          <div className="skills-animated-row2">{items_3}</div>
+        </div>
       </div>
-
-      {/* <div className="skills-cards">
-        {content.map(({ title, items }: any, key: number) => {
-          return (
-            <div className="skills-card skills-card__dark" key={key}>
-              <h5 className="skills-card-title">{title}</h5>
-              <div className="skills-card-content">
-                {items.map((name: string, key: number) => {
-                  return (
-                    <div key={key} className="skills-card-content-item-test">
-                      <div className="skills-card-content-item-title">
-                        <span className="skills-card-content-item-name">{name}</span>
-                        <span className="skills-card-content-item-value">100%</span>
-                      </div>
-                      <div className="skills-card-content-item-range">
-                        <div className="skills-card-content-item-range-fill">
-                          <div className="skills-card-content-item-range-marker" />
-                        </div>
-                      </div>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-          )
-        })}
-      </div> */}
     </div>
   )
 })

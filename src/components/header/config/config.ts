@@ -11,10 +11,10 @@ export const menuConfig = [
     name: 'Навыки',
     link: '#skills',
   },
-  {
-    name: 'Образование',
-    link: '#education',
-  },
+  // {
+  //   name: 'Образование',
+  //   link: '#education',
+  // },
   {
     name: 'Интересы',
     link: '#interests',

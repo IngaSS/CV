@@ -1,47 +1,21 @@
 import { memo } from 'react'
+import { motion } from 'framer-motion'
 import Icon from '../common/icon/icon'
 
-const interests = [
-  {
-    icon: 'linkedIn',
-    name: 'Sport',
-  },
-  {
-    icon: 'linkedIn',
-    name: 'Sport',
-  },
-  {
-    icon: 'linkedIn',
-    name: 'Sport',
-  },
-  {
-    icon: 'linkedIn',
-    name: 'Sport',
-  },
-  {
-    icon: 'linkedIn',
-    name: 'Sport',
-  },
-  {
-    icon: 'linkedIn',
-    name: 'Sport',
-  },
-]
-
-const Interests = memo(() => {
+const Interests = memo(({ title, text, interests }: any) => {
   return (
     <div className="block">
       <h4 className="block-title" id="interests">
-        Interests
+        {title}
       </h4>
-      <div className="interests-card">
-        <p className="interests-card-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis et tortor ac tincidunt. In euismod
-          iaculis lobortis. Vestibulum posuere molestie ipsum vel sollicitudin. Vestibulum venenatis pharetrami. Lorem
-          ipsum dolor sit amet.
-        </p>
+      <motion.div
+        className="interests-card"
+        initial={{ opacity: 0, transform: 'translateY(30%)' }}
+        whileInView={{ opacity: 1, transform: 'translateY(0)' }}
+      >
+        <p className="interests-card-text">{text}</p>
         <div className="interests-items">
-          {interests.map(({ icon, name }: any, key: number) => {
+          {interests?.map(({ icon, name }: any, key: number) => {
             return (
               <div key={key} className="interests-item">
                 <Icon iconName={icon} />
@@ -50,7 +24,7 @@ const Interests = memo(() => {
             )
           })}
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 })

@@ -1,62 +1,48 @@
 import { memo } from 'react'
+import { motion } from 'framer-motion'
 import AVATAR_SRC from '../../assets/avatar/my_avatar.jpeg'
 import Icon from '../common/icon/icon'
 
-const icons = [
-  {
-    name: 'linkedIn',
-  },
-  {
-    name: 'linkedIn',
-  },
-  {
-    name: 'linkedIn',
-  },
-]
-
-const buttons = [
-  {
-    name: 'Download CV',
-    value: 'download',
-  },
-  {
-    name: 'Contact me',
-    value: 'contact',
-  },
-]
-
-const AboutMe = memo(() => {
+const AboutMe = memo(({ name, position, text, socials, buttons }: any) => {
   return (
     <div className="aboutMe-container">
       <div className="aboutMe-upper">
         <div className="aboutMe-upper-block">
-          <h1 className="aboutMe-name">Inga Gulina</h1>
-          <h4 className="aboutMe-position">Web developer</h4>
+          <h1 className="aboutMe-name">{name}</h1>
+          <h4 className="aboutMe-position">{position}</h4>
         </div>
       </div>
-      <div className="aboutMe-avatar">
+      <motion.div
+        className="aboutMe-avatar"
+        initial={{ opacity: 0, transform: 'translateY(30%)' }}
+        whileInView={{ opacity: 1, transform: 'translateY(0)' }}
+      >
         <img src={AVATAR_SRC} alt="my avatar" />
-      </div>
-      <div className="block">
+      </motion.div>
+
+      <motion.div
+        className="block"
+        initial={{ opacity: 0, transform: 'translateY(30%)' }}
+        whileInView={{ opacity: 1, transform: 'translateY(0)' }}
+      >
         <div className="aboutMe-info">
           <div className="aboutMe-socials">
-            {icons.map(({ name }: { name: string }, key: number) => {
+            {socials?.map(({ icon, link }: { icon: string; link: string }, key: number) => {
               return (
-                <button className="aboutMe-socials-btn" key={key}>
-                  <Icon iconName={name} />
-                </button>
+                <a className="aboutMe-socials-btn" href={link} target="_blank" rel="noreferrer" key={key}>
+                  <Icon iconName={icon} />
+                </a>
               )
             })}
           </div>
-          <p className="aboutMe-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis et tortor ac tincidunt. In euismod
-            iaculis lobortis. Vestibulum posuere molestie ipsum vel sollicitudin. Vestibulum venenatis pharetra mi, ut
-            vestibulum elit ultricies a. Vestibulum at mollis ex, ac consectetur massa. Donec nunc dui, laoreet a nibh
-            et, semper tincidunt nunc. Donec ac posuere tellus. Pellentesque tempus suscipit velit sit amet bibendum.
-          </p>
+          <p className="aboutMe-text">{text}</p>
           <div className="aboutMe-actions">
-            {buttons.map(({ name }: any, key: number) => {
-              return (
+            {buttons?.map(({ name, value }: any, key: number) => {
+              return value === 'contact' ? (
+                <a className="aboutMe-actions-btn" href="#contacts" key={key}>
+                  {name}
+                </a>
+              ) : (
                 <button className="aboutMe-actions-btn" key={key}>
                   {name}
                 </button>
@@ -64,7 +50,7 @@ const AboutMe = memo(() => {
             })}
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 })

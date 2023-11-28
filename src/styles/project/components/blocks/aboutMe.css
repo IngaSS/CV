@@ -48,6 +48,17 @@
   & > svg {
     @apply w-32 h-32;
     @apply text-color5;
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    & svg {
+      @apply text-color9;
+    }
+
+    & > span {
+      @apply text-color9;
+    }
   }
 }
 

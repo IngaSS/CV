@@ -25,7 +25,7 @@
 
     & .timeline-event-opposite,
     .timeline-event-content {
-      @apply mr-60 ml-0;
+      @apply mr-56 ml-0;
     }
 
     & .timeline-card {
@@ -68,7 +68,7 @@
 
 .timeline-event-opposite,
 .timeline-event-content {
-  @apply mr-0 ml-60 pt-8 pb-16;
+  @apply mr-0 ml-56 pt-8 pb-16;
 }
 
 .timeline-event {
@@ -139,7 +139,26 @@
 
 .timeline-card-text {
   @apply text-color8 font-light text-14;
-  -webkit-line-clamp: 10;
+}
+
+.timeline-card-text-markdown {
+  @apply text-color8 font-light text-14;
+
+  & ol,
+  ul,
+  menu {
+    list-style: initial;
+    @apply my-14 pl-40;
+  }
+
+  & a {
+    @apply text-color6;
+  }
+
+  & h4 {
+    @apply text-14 font-medium underline;
+    @apply my-12;
+  }
 }
 
 .timeline-card-date {

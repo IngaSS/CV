@@ -17,11 +17,12 @@
   @apply flex flex-col gap-y-8 items-center;
 
   & > svg {
-    @apply text-color2;
+    @apply text-color8;
+    @apply w-48 h-48;
   }
 
   & > span {
-    @apply text-14 font-normal text-color2;
+    @apply text-14 font-normal text-color4;
   }
 }
 

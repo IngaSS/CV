@@ -1,7 +1,13 @@
-import { memo, useState } from 'react'
+import { memo, useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 import Icon from '../common/icon/icon'
 
-const Contacts = memo(() => {
+const EMAIL_PUBLIC_KEY = 'X8v1y2iVKrqv_bQMq'
+const EMAIL_SERVICE_ID = 'service_pgby14h'
+const EMAIL_TEMPLATE_ID = 'template_m5mstna'
+
+const Contacts = memo(({ title, phone, post, form_name, form_email, form_message, btn }: any) => {
   const [formValues, setFormValues] = useState({
     name: '',
     email: '',
@@ -9,6 +15,7 @@ const Contacts = memo(() => {
   })
 
   const { name, email, message } = formValues
+  const [loading, setLoading] = useState(false)
 
   const handleChange = (e: any, field: string) => {
     const value = e.target.value
@@ -17,20 +24,49 @@ const Contacts = memo(() => {
     setFormValues(newValues)
   }
 
+  const handleSend = async (e: any) => {
+    e.preventDefault()
+
+    try {
+      setLoading(true)
+      await emailjs.send(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, {
+        to_name: 'Inga',
+        from_name: `${name} ${email}`,
+        message: message,
+      })
+      alert('Email successfully sent')
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setLoading(false)
+      setFormValues({
+        name: '',
+        email: '',
+        message: '',
+      })
+    }
+  }
+
+  useEffect(() => emailjs.init(EMAIL_PUBLIC_KEY), [])
+
   return (
     <div className="block mb-80">
       <h4 className="block-title" id="contacts">
-        Contact
+        {title}
       </h4>
-      <div className="contacts">
+      <motion.div
+        className="contacts"
+        initial={{ opacity: 0, transform: 'translateY(30%)' }}
+        whileInView={{ opacity: 1, transform: 'translateY(0)' }}
+      >
         <div className="contacts-info">
           <div className="contacts-info-item">
-            <Icon iconName="linkedIn" />
-            <span>+880 - 12345 - 67890</span>
+            <Icon iconName="phone" />
+            <span>{phone}</span>
           </div>
           <div className="contacts-info-item">
-            <Icon iconName="linkedIn" />
-            <span>+880 - 12345 - 67890</span>
+            <Icon iconName="post" />
+            <span>{post}</span>
           </div>
         </div>
         <div className="contacts-form">
@@ -46,7 +82,7 @@ const Contacts = memo(() => {
               className={`contacts-form-item-label contacts-form-item-label__filled-${name.length > 0}`}
               htmlFor="name"
             >
-              Name
+              {form_name}
             </label>
           </div>
           <div className="contacts-form-item">
@@ -61,7 +97,7 @@ const Contacts = memo(() => {
               className={`contacts-form-item-label contacts-form-item-label__filled-${email.length > 0}`}
               htmlFor="email"
             >
-              Email
+              {form_email}
             </label>
           </div>
           <div className="contacts-form-item">
@@ -75,12 +111,20 @@ const Contacts = memo(() => {
               className={`contacts-form-item-label contacts-form-item-label__filled-${message.length > 0}`}
               htmlFor="phone"
             >
-              Message
+              {form_message}
             </label>
           </div>
-          <button className="contacts-form-btn">SEND</button>
+          <button onClick={(e) => handleSend(e)} className="contacts-form-btn">
+            {loading ? (
+              <span className="send-loader">
+                <span className="send-loader-inner" />
+              </span>
+            ) : (
+              btn
+            )}
+          </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 })

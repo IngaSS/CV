@@ -1,7 +1,10 @@
 import { ForwardedRef, forwardRef, memo } from 'react'
+import Markdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import { motion } from 'framer-motion'
 
 const TimelineCard = (content: any) => {
-  const { title, text, date } = content
+  const { title, text, date, markdown_text } = content
 
   return (
     <div className="timeline-card">
@@ -10,6 +13,11 @@ const TimelineCard = (content: any) => {
         <div className="timeline-card-inner-content">
           {date && <span className="timeline-card-date">{date}</span>}
           {text && <p className="timeline-card-text">{text}</p>}
+          {markdown_text && (
+            <Markdown className="timeline-card-text-markdown" remarkPlugins={[remarkGfm]}>
+              {markdown_text}
+            </Markdown>
+          )}
         </div>
       </div>
     </div>
@@ -40,9 +48,13 @@ const CustomTimeline = memo(
                 <TimelineMarker {...el} />
                 <div className="timeline-event-connector" />
               </div>
-              <div className="timeline-event-content">
+              <motion.div
+                className="timeline-event-content"
+                initial={{ opacity: 0, transform: 'translateY(30%)' }}
+                whileInView={{ opacity: 1, transform: 'translateY(0)' }}
+              >
                 <TimelineCard {...el} />
-              </div>
+              </motion.div>
             </div>
           )
         })}
