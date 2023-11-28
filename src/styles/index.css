@@ -568,9 +568,19 @@ html {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+
+  .section {
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+  }
 }
 
 @media (max-width: 576px) {
+  .section {
+    margin-bottom: 2.75rem;
+    padding-bottom: 1.5rem;
+  }
+
   .block {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -698,6 +708,9 @@ html {
     transition: all 0.3s;
     & .navigation-mobile-list {
       height: 0;
+    }
+    & .navigation-mobile-list {
+      overflow: hidden;
     }
     &__active-true {
       padding: 1rem;
@@ -1348,12 +1361,6 @@ html {
   flex-direction: column;
   gap: 4rem;
   overflow: hidden;
-  /* &:hover {
-    & .skills-animated-row,
-    & .skills-animated-row2 {
-      animation-play-state: paused;
-    }
-  } */
   &:before {
     position: absolute;
   }
@@ -1515,6 +1522,43 @@ html {
     padding-left: 0.625rem;
     padding-right: 0.625rem;
   }
+
+  .skills-animated-rows {
+    gap: 1.5rem;
+  }
+
+  .skills-animated-row {
+    -moz-column-gap: 0.75rem;
+         column-gap: 0.75rem;
+    animation: animateLeft 32s linear infinite;
+  }
+
+  .skills-animated-row2 {
+    -moz-column-gap: 0.75rem;
+         column-gap: 0.75rem;
+    animation: animateLeft2 32s linear infinite;
+  }
+
+  .skills-animated-item {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+    max-width: 2.5rem;
+    white-space: pre-line;
+    text-align: center;
+    & svg {
+      height: 3rem;
+    }
+    & svg {
+      width: 3rem;
+    }
+    & span {
+      font-size: 0.875rem;
+    }
+  }
 }
 
 @media (max-width: 576px) {
@@ -1525,6 +1569,42 @@ html {
 
   .skills-animated-rows {
     gap: 1.5rem;
+  }
+
+  .skills-animated-row {
+    -moz-column-gap: 0.75rem;
+         column-gap: 0.75rem;
+    animation: animateLeft 32s linear infinite;
+  }
+
+  .skills-animated-row2 {
+    -moz-column-gap: 0.75rem;
+         column-gap: 0.75rem;
+    animation: animateLeft2 32s linear infinite;
+  }
+
+  .skills-animated-item {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+    max-width: 2.5rem;
+    white-space: pre-line;
+    text-align: center;
+    & svg {
+      height: 2rem;
+    }
+    & svg {
+      width: 2rem;
+    }
+    & span {
+      font-size: 0.75rem;
+    }
+    & span {
+      display: none;
+    }
   }
 }
 

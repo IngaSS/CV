@@ -63,7 +63,7 @@
     transition: all 0.3s;
 
     & .navigation-mobile-list {
-      @apply h-0;
+      @apply h-0 overflow-hidden;
     }
 
     &__active-true {

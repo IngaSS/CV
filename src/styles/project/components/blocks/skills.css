@@ -89,13 +89,6 @@
 .skills-animated-rows {
   @apply mt-32 flex flex-col gap-64 overflow-hidden relative;
 
-  /* &:hover {
-    & .skills-animated-row,
-    & .skills-animated-row2 {
-      animation-play-state: paused;
-    }
-  } */
-
   &:before {
     @apply top-0 h-full left-0 w-1/5 absolute z-1;
     content: '';
@@ -195,6 +188,33 @@
   .companies-section {
     @apply px-10;
   }
+
+  .skills-animated-rows {
+    @apply gap-24;
+  }
+
+  .skills-animated-row {
+    @apply gap-x-12;
+    animation: animateLeft 32s linear infinite;
+  }
+
+  .skills-animated-row2 {
+    @apply gap-x-12;
+    animation: animateLeft2 32s linear infinite;
+  }
+
+  .skills-animated-item {
+    @apply flex-shrink-0 flex flex-col gap-y-16 items-center justify-center;
+    @apply whitespace-pre-line text-center max-w-40;
+
+    & svg {
+      @apply w-48 h-48;
+    }
+
+    & span {
+      @apply text-14;
+    }
+  }
 }
 
 @screen mobile {
@@ -204,5 +224,29 @@
 
   .skills-animated-rows {
     @apply gap-24;
+  }
+
+  .skills-animated-row {
+    @apply gap-x-12;
+    animation: animateLeft 32s linear infinite;
+  }
+
+  .skills-animated-row2 {
+    @apply gap-x-12;
+    animation: animateLeft2 32s linear infinite;
+  }
+
+  .skills-animated-item {
+    @apply flex-shrink-0 flex flex-col gap-y-16 items-center justify-center;
+    @apply whitespace-pre-line text-center max-w-40;
+
+    & svg {
+      @apply w-32 h-32;
+    }
+
+    & span {
+      @apply text-12;
+      @apply hidden;
+    }
   }
 }

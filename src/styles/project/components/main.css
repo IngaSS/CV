@@ -29,9 +29,18 @@ html {
   .block {
     @apply px-24;
   }
+
+  .section {
+    @apply mb-64;
+    @apply pb-32;
+  }
 }
 
 @screen mobile {
+  .section {
+    @apply mb-44;
+    @apply pb-24;
+  }
   .block {
     @apply px-16;
   }
