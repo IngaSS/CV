@@ -15,11 +15,11 @@ const Interests = memo(({ title, text, interests }: any) => {
       >
         <p className="interests-card-text">{text}</p>
         <div className="interests-items">
-          {interests?.map(({ icon, name }: any, key: number) => {
+          {interests?.map(({ icon }: { icon: string }, key: number) => {
             return (
               <div key={key} className="interests-item">
                 <Icon iconName={icon} />
-                <span>{name}</span>
+                {/* <span>{name}</span> */}
               </div>
             )
           })}
