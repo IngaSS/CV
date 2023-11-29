@@ -14,7 +14,7 @@ const Experience = memo(({ title, events }: any) => {
   const markdownContent = useMemo(() => data?.main?.data?.attributes, [data?.main?.data?.attributes])
 
   const editedEvents = useMemo(
-    () => events?.map((el: any) => (el.markdown ? { ...el, markdown_text: markdownContent[el.markdown] } : el)),
+    () => events?.map((el: any) => (el.markdown ? { ...el, markdown_text: markdownContent[el.markdown] || '' } : el)),
     [events, markdownContent]
   )
 
