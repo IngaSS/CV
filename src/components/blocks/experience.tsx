@@ -1,24 +1,14 @@
 import { memo, useMemo } from 'react'
-
 import CustomTimeline from '../common/customTimeline/customTimeline'
-import { GET_MAIN_PAGE } from '../../graphql/queries/main'
-import { useQuery } from '@apollo/client'
+import content from '../../content/content.json'
 
 const Experience = memo(({ title, events }: any) => {
-  const { data } = useQuery(GET_MAIN_PAGE, {
-    variables: {
-      locale: 'en',
-    },
-  })
-
-  const markdownContent = useMemo(() => data?.main?.data?.attributes, [data?.main?.data?.attributes])
-
   const editedEvents = useMemo(
     () =>
       events?.map((el: any) =>
-        el.markdown ? { ...el, markdown_text: markdownContent ? markdownContent[el.markdown] : '' } : el
+        el.markdown ? { ...el, markdown_text: content ? (content as any)[el.markdown] : '' } : el
       ),
-    [events, markdownContent]
+    [events]
   )
 
   return (

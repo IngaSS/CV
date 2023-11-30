@@ -1,6 +1,7 @@
 import { ForwardedRef, forwardRef, memo } from 'react'
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import rehypeRaw from 'rehype-raw'
 import { motion } from 'framer-motion'
 
 const TimelineCard = (content: any) => {
@@ -14,7 +15,7 @@ const TimelineCard = (content: any) => {
           {date && <span className="timeline-card-date">{date}</span>}
           {text && <p className="timeline-card-text">{text}</p>}
           {markdown_text && (
-            <Markdown className="timeline-card-text-markdown" remarkPlugins={[remarkGfm]}>
+            <Markdown className="timeline-card-text-markdown" rehypePlugins={[rehypeRaw, remarkGfm]}>
               {markdown_text}
             </Markdown>
           )}
