@@ -43,7 +43,7 @@ const AboutMe = memo(({ name, position, text, socials, buttons }: any) => {
                   {name}
                 </a>
               ) : (
-                <a href="dist/Гулина Инга.pdf" download className="aboutMe-actions-btn" key={key}>
+                <a href="/Гулина Инга.pdf" download className="aboutMe-actions-btn" key={key}>
                   {name}
                 </a>
               )
