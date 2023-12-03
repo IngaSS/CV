@@ -1,0 +1,59 @@
+body {
+  @apply h-screen;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+.layout {
+  @apply bg-color1;
+}
+
+.block {
+  max-width: 1100px;
+  @apply mx-auto;
+}
+
+.section {
+  @apply mb-88;
+  @apply pb-48;
+}
+
+.block-title {
+  @apply uppercase text-color8;
+  @apply mb-24 text-32 font-medium text-center;
+}
+
+@screen tablet {
+  .block {
+    @apply px-24;
+  }
+
+  .section {
+    @apply mb-64;
+    @apply pb-32;
+  }
+}
+
+@screen mobile {
+  .section {
+    @apply mb-44;
+    @apply pb-24;
+  }
+  .block {
+    @apply px-16;
+  }
+
+  .mobile-menu__opened-true {
+    & .main {
+      @apply hidden;
+    }
+
+    & .menu-mobile {
+      @apply flex-col justify-center;
+      @apply pl-16;
+      @apply fixed left-0 top-0 h-68 w-full bg-color2;
+    }
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "content": {
+    "about_me": {
+      "name": "Инга Гулина",
+      "position": "Ведущий frontend разработчик",
+      "text": "Frontend-разработчик с опытом более четырех лет. В работе мне важны вовлеченность и интерес к проекту, желание сделать его удобным и полезным для пользователя, а не бездумное закрытие задач. Люблю свою работу и не боюсь брать ответственность.",
+      "socials": [
+        {
+          "icon": "telegram",
+          "action": "",
+          "link": "https://t.me/+79779103430"
+        },
+        {
+          "icon": "whatsapp",
+          "action": "",
+          "link": "https://wa.me/+79779103430"
+        },
+        {
+          "icon": "phone",
+          "action": "phone",
+          "link": "tel:+79779103430"
+        },
+        {
+          "icon": "post",
+          "action": "post",
+          "link": "mailto:guingg@inbox.ru"
+        }
+      ],
+      "buttons": [
+        {
+          "name": "Скачать CV",
+          "value": "download"
+        },
+        {
+          "name": "Контакты",
+          "value": "contact"
+        }
+      ]
+    },
+    "experience": {
+      "title": "Опыт",
+      "events": [
+        {
+          "title": "Ведущий Frontend разработчик",
+          "place": "Лаборатория Наносемантика",
+          "text": "В компании “Лаборатория Наносемантика” я прошла путь от младшего разработчика до ведущего специалиста. За время моей работы я участвовала в таких проектах как: ",
+          "marker": "",
+          "markdown": "experience_markdown1",
+          "date": "Октябрь 2019 - по настоящее время"
+        },
+        {
+          "title": "Ведущий Frontend разработчик",
+          "place": "Лаборатория Наносемантика",
+          "marker": "",
+          "markdown": "experience_markdown2",
+          "date": "Октябрь 2019 - по настоящее время"
+        },
+        {
+          "title": "Ведущий Frontend разработчик",
+          "place": "Лаборатория Наносемантика",
+          "marker": "",
+          "markdown": "experience_markdown3",
+          "date": "Октябрь 2019 - по настоящее время"
+        },
+        {
+          "title": "Frontend разработчик",
+          "place": "Лаборатория Наносемантика",
+          "marker": "",
+          "markdown": "experience_markdown4",
+          "date": "Октябрь 2019 - по настоящее время"
+        },
+        {
+          "title": "Младший Frontend разработчик",
+          "place": "Flydata",
+          "text": "Верстка и организация логики сайта для кулинарной студии МУКА.",
+          "marker": "",
+          "date": "Июнь 2019 - Октябрь 2019"
+        },
+        {
+          "title": "Преподаватель иностранных языков",
+          "place": "ГБОУ СОШ 806",
+          "text": "Преподавание английского языка учащимся средней образовательной школы, исполнение обязанностей классного руководителя, координация сотрудничества между школой и колледжами",
+          "marker": "",
+          "date": "Июль 2017 - Январь 2019"
+        }
+      ]
+    },
+    "skills": {
+      "title": "Навыки",
+      "items1": [
+        {
+          "name": "Java Script",
+          "icon": "js"
+        },
+        {
+          "name": "TypeScript",
+          "icon": "ts"
+        },
+        {
+          "name": "React",
+          "icon": "react"
+        },
+        {
+          "name": "Redux",
+          "icon": "redux"
+        },
+        {
+          "name": "HTML",
+          "icon": "html"
+        },
+        {
+          "name": "CSS",
+          "icon": "css"
+        }
+      ],
+      "items2": [
+        {
+          "name": "Tailwind CSS",
+          "icon": "tailwind"
+        },
+        {
+          "name": "GraphQL",
+          "icon": "graphql"
+        },
+        {
+          "name": "Vite js",
+          "icon": "vite"
+        },
+        {
+          "name": "Node JS",
+          "icon": "node"
+        },
+        {
+          "name": "StrapiCMS",
+          "icon": "strapi"
+        },
+        {
+          "name": "GatsbyJS",
+          "icon": "gatsby"
+        },
+        {
+          "name": "Apollo GraphQL",
+          "icon": "apollo"
+        }
+      ],
+      "items3": [
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "PostCSS",
+          "icon": "postCss"
+        },
+        {
+          "name": "Styled components",
+          "icon": "styledComponents"
+        },
+        {
+          "name": "Figma",
+          "icon": "figma"
+        },
+        {
+          "name": "Webpack",
+          "icon": "webpack"
+        },
+        {
+          "name": "RollUp",
+          "icon": "rollup"
+        },
+        {
+          "name": "Jira",
+          "icon": "jira"
+        }
+      ],
+      "content": [
+        {
+          "title": "Professional",
+          "items": ["Committed", "Committed", "Committed", "Committed", "Committed"]
+        },
+        {
+          "title": "Professional",
+          "items": ["Committed", "Committed", "Committed", "Committed", "Committed"]
+        },
+        {
+          "title": "Professional",
+          "items": ["Committed", "Committed", "Committed", "Committed", "Committed"]
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "events": [
+        {
+          "title": "Senior UX/UI Designer",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur accusantium maxime molestiae sunt ipsa.",
+          "marker": "",
+          "date": "January 2012 - December 2015"
+        },
+        {
+          "title": "Senior UX/UI Designer",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur accusantium maxime molestiae sunt ipsa.",
+          "marker": "",
+          "date": "January 2012 - December 2015"
+        },
+        {
+          "title": "Senior UX/UI Designer",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur accusantium maxime molestiae sunt ipsa.",
+          "marker": "",
+          "date": "January 2012 - December 2015"
+        },
+        {
+          "title": "Senior UX/UI Designer",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur accusantium maxime molestiae sunt ipsa.",
+          "marker": "",
+          "date": "January 2012 - December 2015"
+        }
+      ]
+    },
+    "interests": {
+      "title": "Интересы",
+      "text": "Свободное время люблю проводить с семье и друзьями, читать книги и смотреть фильмы. Когда накатывает вдохновение могу пописать картины. Люблю спорт и верю, что он не только помогает сжигать калории, но и наполняет меня энергией. Мне важно совершенствоваться и развиваться, как специалисту, поэтому люблю читать статьи о новостях в сфере разработки и проходить курсы по повышению квалификации или решать задачки на CodeWars",
+      "interests": [
+        {
+          "icon": "friends",
+          "name": "Friends"
+        },
+        {
+          "icon": "study",
+          "name": "Study"
+        },
+        {
+          "icon": "sport",
+          "name": "Sport"
+        },
+        {
+          "icon": "books",
+          "name": "Books"
+        },
+        {
+          "icon": "movie",
+          "name": "Movie"
+        },
+        {
+          "icon": "paint",
+          "name": "Paint"
+        }
+      ]
+    },
+    "contacts": {
+      "title": "Контакты",
+      "phone": "+7 (977) 910 3430",
+      "post": "guingg@inbox.ru",
+      "form_name": "Name",
+      "form_email": "Email",
+      "form_message": "Message",
+      "btn": "Send"
+    }
+  },
+  "experience_markdown1": "#### Разработка проекта Syntelly: https://app.syntelly.com/ \n **Сайт проекта**: [https://syntelly.com/](https://syntelly.com/) <br></br>**Моя роль в проекте**: являюсь руководителем команды фронтенд разработчиков. В моей команде три разработчика. В рамках своей работы участвую в верхнеуровневых встречах по проекту и планировании. Осуществляю разбор, приоритизацию и  распределение задач, поддерживаю здоровую атмосферу внутри команды и взаимодействие с другими командами разработки, провожу встречи и one to one. Проект разделен на две части - Платформа Синтелли и Синтелли Маркер <br><br> **Платформа Синтелли стэк**: React, Redux, Redux-Saga, Rest, Styled Components, KeyCloak<br>**Синтелли Маркер стэк**: React, Apollo GraphQL, TailwindCSS, PostCSS, KeyCloak",
+  "experience_markdown2": "#### Разработка официального сайта компании: [https://nanosemantics.ai/](https://nanosemantics.ai/)\n **Моя роль в проекте**: с нуля вела разработку проекта. Продумала архитектуру и стек, сверстала несколько страниц, настроила интеграцию с CMS, настроила SSR. <br><br>**Достижение**: Не смотря на то, что сайт еще находится на стадии активной разработки, он **опубликован** и является “лицом” компании.<br>**Стэк**: React, StrapiCMS, Vite.js, Apollo GraphQL, TailwindCSS, PostCSS",
+  "experience_markdown3": "#### Разработка Dialog OS (флагманский продукт компании). Платформа для создания и обучения виртуальных ассистентов (чат-боты, голосовые и текстовые роботы): [https://nanosemantics.ai/dialog-os](https://nanosemantics.ai/dialog-os) \n**Моя роль в проекте**: разработка разделов платформы, интеграция API, верстка. Наиболее запоминающейся стала разработка текстового редактора с помощью Draft.JS <br><br> **Достижения**: внесла свой вклад в разработку востребованного продукта, с помощью которого обучаются чат-боты для таких компаний как: HeadHunter, Лэтуаль, ВТБ <br>**Стэк**: React, Node.js, Apollo GraphQl, TailwindCSS, PostCSS, Draft.js, Keycloak",
+  "experience_markdown4": "#### Разработка сайта-портала для open source экосистемы: [https://sova.ai/](https://sova.ai/)\n**Моя роль в проекте**: разработка сайта с нуля, продумывание архитектуры, верстка (десктопная и мобильная), взаимодействие с  API, локализация, подключение аналитики. <br><br>**Достижение**: сайт находится в продакшене более двух лет <br>**Стэк**: GatsbyJS, StrapiCMS, TailwindCSS, PostCSS"
+}
