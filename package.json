@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://ingass.github.io/CV/",
   "scripts": {
     "watch:css": "npx tailwindcss -i ./src/styles/project/index.css -o ./src/styles/index.css --watch",
     "start:scripts": "vite",
