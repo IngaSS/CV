@@ -1,0 +1,9 @@
+# Site settings
+title: My CV
+author:
+  name: Gulina Inga
+  email: guingg@inbox.ru
+description: 'My CV site'
+
+# Build settings
+remote_theme: jekyll/minima
